@@ -244,6 +244,10 @@
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondary-btn a{
@@ -251,10 +255,18 @@
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.primary-btn:hover, .primary-btn button:hover{
+.primary-btn:hover, .primary-btn a:hover{
     background-color: #D39851;
+}
+
+.secondary-btn:hover, .secondary-btn a:hover{
+    background-color: #e7e5e5;
 }
 
 .secondary-btn{
