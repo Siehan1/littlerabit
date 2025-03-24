@@ -66,7 +66,9 @@
 .container-nav img{
     height: 59px;
 }
+/* styling nav end */
 
+/* styling content */
 .content{
     font-family: var(--font);
     margin: auto;
