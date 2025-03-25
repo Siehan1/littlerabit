@@ -330,4 +330,134 @@
 }
 
 
+.navbar-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.items-nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 26px;
+}
+
+.items-nav a{
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.items-nav a:hover{
+    color: var(--warna-utama);
+}
+
+.items-nav a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--warna-utama);
+    transition: width 0.3s ease;
+}
+
+.items-nav a:hover::after{
+    width: 100%;
+}
+
+
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #999898;
+    padding: 0 12px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 277px;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.searchbar input{
+    font-family: var(--font);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+.container-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.daftar-buku{
+    font-family: var(--font);
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    width: 217px;
+    align-items: flex-start;
+    font-family: var(--font);
+    padding: 12px;
+    gap: 15px;
+    background-color: var(--warna-utama);
+    border-radius: 12px;
+}
+
+.card-list img{
+    width: 100%;
+    height: 219px;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.keterangan h3{
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.keterangan h4{
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
 
