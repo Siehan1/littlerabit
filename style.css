@@ -329,5 +329,213 @@
     background-color: #C7C6C6;
 }
 
+/* ini quiz ya */
+/* Reset and Global Styles */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Styleguide Variables */
+:root {
+  --warna-utama: rgba(251, 180, 94, 1);
+  --text: rgba(58, 58, 58, 1);
+  --background: rgba(248, 241, 234, 1);
+  --foundation-orangenormal: rgba(251, 180, 94, 1);
+  --foundation-orangenormal-hover: rgba(226, 162, 85, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+}
+
+/* Quiz Buku Styles */
+.quiz-buku {
+  background-color: var(--warna-utama);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.overlap-group-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 261px 134px;
+  box-sizing: border-box;
+}
+
+.overlap-group {
+  position: relative;
+  width: 100%;
+  max-width: 1173px;
+  height: 502px;
+  background-color: var(--variable-collection-white);
+  border-radius: 12px;
+  box-shadow: 0 15px 0 #d39851;
+}
+
+.overlap {
+  position: absolute;
+  width: 707px;
+  height: 352px;
+  top: 75px;
+  right: 64px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tak {
+  width: 369px;
+  height: 352px;
+}
+
+.masuk-dan-tunjukkan {
+  position: absolute;
+  width: 371px;
+  top: 153px;
+  right: 0;
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: 500;
+  color: var(--warna-utama);
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cta-container {
+  position: absolute;
+  bottom: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta-button {
+  width: 258px;
+  height: 52px;
+  background-color: var(--warna-utama);
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--foundation-orangenormal-hover);
+}
+
+.cta-text {
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: 500;
+  color: var(--variable-collection-white);
+  font-size: 20px;
+}
+
+.mari-bermain-bersama {
+  position: absolute;
+  top: 82px;
+  left: 79px;
+  font-family: "Aclonica-Regular", sans-serif;
+  font-weight: 400;
+  color: #385f40;
+  font-size: 46px;
+  letter-spacing: -1.84px;
+  line-height: 57px;
+}
+
+.group {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 27px;
+  right: 35px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .overlap-group-wrapper {
+    padding: 150px 50px;
+  }
+  .overlap-group {
+    max-width: 100%;
+    height: auto;
+    padding: 50px 20px;
+  }
+  .overlap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tak {
+    width: 100%;
+    max-width: 369px;
+    height: auto;
+  }
+  .masuk-dan-tunjukkan {
+    position: static;
+    width: 100%;
+    max-width: 371px;
+    margin-top: 20px;
+  }
+  .cta-container {
+    position: static;
+    margin-top: 30px;
+    transform: none;
+  }
+  .mari-bermain-bersama {
+    position: static;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .group {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlap-group-wrapper {
+    padding: 100px 20px;
+  }
+  .mari-bermain-bersama {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+  .masuk-dan-tunjukkan {
+    font-size: 18px;
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 258px;
+  }
+}
 
 
