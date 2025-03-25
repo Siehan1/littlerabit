@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { title:"Hari Lebaran Yaya", author: "Hasna Taqqiya", image:"./src/image 19.png", lastRead: true},
         { title: "Jadi Apa ya?", author: "Nabila Adani", image:"./src/image20.png", lastRead:false},
         { title:"Festival Aku datang", author:"Tantra Rahmadia", image:"./src/image 21.png", lastRead:true},
-        {title:"Membuat Apam", author:"Kiki Putri", image:"./src/image 22.png", lastRead: true},
-        {title:"Tidak bisa tidak", author:"Lenny Puspita Ekawaty", image:"./src/image 23.png", lastRead: true}
+        {title:"Membuat Apam", author:"Kiki Putri", image:"./src/image 22.png", lastRead: true}
     ];
 
     function truncateText(text, maxLength) {
@@ -45,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             endRead.appendChild(card);
         }
     }
+
 
     books.forEach(addBook);
 });
