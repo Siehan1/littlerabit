@@ -21,6 +21,7 @@
 }
 
 
+
 /* navbar styling start */
 .navbar{
     background-color: var(--white);
@@ -244,6 +245,10 @@
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondary-btn a{
@@ -251,10 +256,18 @@
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.primary-btn:hover, .primary-btn button:hover{
+.primary-btn:hover, .primary-btn a:hover{
     background-color: #D39851;
+}
+
+.secondary-btn:hover, .secondary-btn a:hover{
+    background-color: #e7e5e5;
 }
 
 .secondary-btn{
@@ -317,5 +330,539 @@
     background-color: #C7C6C6;
 }
 
+/* ini quiz ya */
+/* Reset and Global Styles */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Styleguide Variables */
+:root {
+  --warna-utama: rgba(251, 180, 94, 1);
+  --text: rgba(58, 58, 58, 1);
+  --background: rgba(248, 241, 234, 1);
+  --foundation-orangenormal: rgba(251, 180, 94, 1);
+  --foundation-orangenormal-hover: rgba(226, 162, 85, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+}
+
+/* Quiz Buku Styles */
+.quiz-buku {
+  background-color: var(--warna-utama);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.overlap-group-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 261px 134px;
+  box-sizing: border-box;
+}
+
+.overlap-group {
+  position: relative;
+  width: 100%;
+  max-width: 1173px;
+  height: 502px;
+  background-color: var(--variable-collection-white);
+  border-radius: 12px;
+  box-shadow: 0 15px 0 #d39851;
+}
+
+.overlap {
+  position: absolute;
+  width: 707px;
+  height: 352px;
+  top: 75px;
+  right: 64px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tak {
+  width: 369px;
+  height: 352px;
+}
+
+.masuk-dan-tunjukkan {
+  position: absolute;
+  width: 371px;
+  top: 153px;
+  right: 0;
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: 500;
+  color: var(--warna-utama);
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cta-container {
+  position: absolute;
+  bottom: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta-button {
+  width: 258px;
+  height: 52px;
+  background-color: var(--warna-utama);
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--foundation-orangenormal-hover);
+}
+
+.cta-text {
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: 500;
+  color: var(--variable-collection-white);
+  font-size: 20px;
+}
+
+.mari-bermain-bersama {
+  position: absolute;
+  top: 82px;
+  left: 79px;
+  font-family: "Aclonica-Regular", sans-serif;
+  font-weight: 400;
+  color: #385f40;
+  font-size: 46px;
+  letter-spacing: -1.84px;
+  line-height: 57px;
+}
+
+.group {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 27px;
+  right: 35px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .overlap-group-wrapper {
+    padding: 150px 50px;
+  }
+  .overlap-group {
+    max-width: 100%;
+    height: auto;
+    padding: 50px 20px;
+  }
+  .overlap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tak {
+    width: 100%;
+    max-width: 369px;
+    height: auto;
+  }
+  .masuk-dan-tunjukkan {
+    position: static;
+    width: 100%;
+    max-width: 371px;
+    margin-top: 20px;
+  }
+  .cta-container {
+    position: static;
+    margin-top: 30px;
+    transform: none;
+  }
+  .mari-bermain-bersama {
+    position: static;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .group {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlap-group-wrapper {
+    padding: 100px 20px;
+  }
+  .mari-bermain-bersama {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+  .masuk-dan-tunjukkan {
+    font-size: 18px;
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 258px;
+  }
+}
+
+.navbar-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    border-bottom: 2px solid #D9D9D9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1000;
+}
+
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.items-nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 26px;
+}
+
+.items-nav a{
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.items-nav a:hover{
+    color: var(--warna-utama);
+}
+
+.items-nav a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--warna-utama);
+    transition: width 0.3s ease;
+}
+
+.items-nav a:hover::after{
+    width: 100%;
+}
 
 
+.searchbar{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #999898;
+    padding: 0 12px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 277px;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.searchbar input{
+    font-family: var(--font);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+.container-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.daftar-buku{
+    font-family: var(--font);
+    padding-top: 20px;
+    padding-left: 40px;
+    font-size: 36px;
+    margin-top: 80px;
+}
+
+.list-buku{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.last-read{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  0 20px;
+}
+
+.container-body{
+    height: 950px;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    width: 217px;
+    align-items: flex-start;
+    font-family: var(--font);
+    padding: 12px;
+    gap: 12px;
+    background-color: var(--warna-utama);
+    border-radius: 12px;
+}
+
+.card-list img{
+    width: 100%;
+    height: 219px;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.keterangan h3{
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: start;
+}
+
+.keterangan h4{
+    color: #FFF;
+    font-family: var(--font     );
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.last-read{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.end-read{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    justify-content: start;
+    padding: 0 20px;
+}
+
+.container-judul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: var(--font);
+    color: var(--warna-utama);
+    padding-top: 20px;
+}
+
+.container-judul h2{
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.background{
+    width: 100%;
+    height: 380px;
+    background-color: #FF9E2A;
+}
+
+.container-buku{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.info{
+    font-family: var(--font);
+    margin-top: -150px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info h3{
+    font-size: 28px;
+}
+
+.info h4{
+    font-weight: 200;
+}
+
+.content-buku .img-content-buku{
+    margin-top: -200px;
+    margin-left: 150px;
+    border-radius: 12px;
+    box-shadow: 5px 7px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    background-color:  rgba(255, 205, 43, 0.25);
+    padding: 6px 8px;
+    border-radius: 100px;
+}
+
+.share-save-read{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: -235px;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+}
+
+.share-save-read a{
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 16px;
+    color: var(--warna-utama);
+    width: 100%;
+    height: 100%;
+}
+
+.read{
+    padding: 8px 16px;
+    background-color: var(--button);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    height: 43px;
+}
+
+.read a{
+    color: var(--white);
+}
+
+.rating-star{
+    width: 24px;
+    height: 24px;
+}
+
+.save, .share{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 16px;
+    border: 2px solid var(--warna-utama);
+    border-radius: 100px;
+}
+
+.save img, .share img{
+    width: 24px;
+    height: 24px;
+}
+
+.main-content-buku{
+    display: inline-flex;
+    flex-direction: row;
+    font-family: var(--font);
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 50px;
+    gap: 64px;
+    height: 700px;
+}
+
+.sinopsis{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: flex-start;
+    margin-left: 150px;
+}
+
+.sinopsis p{
+    text-align: justify;
+}
+
+.rekomendasi{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.rekomendasi h3{
+    padding: 0 20px;
+}
+
+.reqbooks{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
