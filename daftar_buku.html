@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="container-body">
     <nav class="navbar-2">
         <div class="logo-nav">
             <img src="./src/Logo.svg" alt="">
@@ -32,19 +33,32 @@
 
     <h2 class="daftar-buku">Daftar Buku</h2>
     
-    <div class="list-buku">
-        <div class="last-read">
+    <div class="list-buku" id="booklist">
+        <div class="container-judul">
+            <h2>Terakhir dibaca</h2>
+            <h2>Lihat Semua</h2>
+        </div>
+
+        <div class="last-read" id="lastRead">
             <div class="card-list">
-                <img src="./src/image 13.png" alt="">
+                <img src="./src/image13.png" alt="">
                 <div class="keterangan">
-                    <h3>Ikan Tipis</h3>
+                    <h3>Ini milik siapa?</h3>
                     <h4>S. Titik Widia</h4>
                 </div>
             </div>
         </div>
-        <div class="end-read">
+        <div class="container-judul">
+            <h2>Selesai Dibaca</h2>
+            <h2>Lihat Semua</h2>
+        </div>
+        <div class="end-read" id="endRead">
 
         </div>
     </div>
+    </div>
+
+
+    <script src="./script2.js"></script>
 </body>
 </html>
