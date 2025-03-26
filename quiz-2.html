@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literabit | Kuis</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #FBB45E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <button class="close-btn" id="close-btn" title="Kembali ke beranda">×</button>
+            <div class="header-controls">
+                <div class="hearts" id="hearts">
+                    <!-- Hearts will be added by JavaScript -->
+                </div>
+                <div id="question-count">1/5</div>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="quiz-body">
+            <div class="question-image" id="question-image">
+                <img src="" alt="">
+            </div>
+            <div class="question" id="question">Siapa tokoh utama dalam cerita ini?</div>
+            <div class="options" id="options">
+                <!-- Options will be added by JavaScript -->
+            </div>
+            <div class="feedback" id="feedback"></div>
+            <button class="next-btn" id="next-btn" disabled >Selanjutnya</button>
+            <div class="score-container" id="score-container">
+                <h2>Kuis Selesai!</h2>
+                <p>Skor Kamu: <span id="score">0</span>/5</p>
+                <button class="restart-btn" id="restart-btn">Coba Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Dialog -->
+    <div class="confirmation-dialog" id="confirmation-dialog">
+        <div class="dialog-content">
+            <p>Apakah Anda yakin ingin keluar dari quiz?</p>
+            <p>Progress yang belum disimpan akan hilang.</p>
+            <div class="dialog-buttons">
+                <button class="dialog-btn confirm" id="confirm-exit">Ya, Keluar</button>
+                <button class="dialog-btn cancel" id="cancel-exit">Lanjutkan Kuis</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./kuis.js"></script>
+</body>
+
+
+</html>
