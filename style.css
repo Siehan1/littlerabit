@@ -866,3 +866,343 @@ a {
     width: 100%;
     flex-wrap: wrap;
 }
+
+/* =========================== */
+/* BERANDA - TRENDING BOOKS */
+/* =========================== */
+.trending {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.trending .book-card {
+    flex: 0 0 250px;
+    background: linear-gradient(to bottom, #fbd3e9, #bb377d);
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
+
+.trending .book-card .btn-baca { /* Button khusus Trending */
+    background: var(--warna-utama);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.trending .book-card .btn-baca:hover {
+    background: var(--warna-hover);
+}
+
+/* =========================== */
+/* BERANDA - GENRE SECTION */
+/* =========================== */
+.genre {
+    margin-top: 40px;
+}
+
+.genre h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+.genre-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.genre-card {
+    flex: 0 0 180px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    background: linear-gradient(to bottom, #80d0c7, #13547a);
+    color: white;
+}
+
+.genre-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* =========================== */
+/* BERANDA - POPULAR BOOKS */
+/* =========================== */
+.popular {
+    margin-top: 40px;
+}
+
+.popular h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+.book-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.popular .book-card { /* Hanya berlaku untuk bagian Popular */
+    flex: 0 0 150px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    background: #ffcc80;
+    color: black;
+    cursor: pointer;
+}
+
+.popular .book-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* =========================== */
+/* FOOTER */
+/* =========================== */
+footer {
+    background: var(--warna-utama);
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
+    color: var(--white);
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Styling untuk gambar buku */
+.book-card {
+    position: relative;
+    background: white; /* Warna latar belakang kartu */
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img.book-cover {
+    width: 100%;
+    height: 200px; /* Sesuaikan tinggi gambar */
+    object-fit: cover; /* Agar gambar tidak terdistorsi */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.trending .book-card h3,
+.popular .book-card h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.trending .book-card .btn-baca {
+    margin-top: 10px;
+}
+
+/* Sesuaikan ukuran kartu di bagian "Popular" */
+.popular .book-card {
+    flex: 0 0 150px;
+    padding: 10px;
+}
+
+.beranda{
+    font-family: var(--font);
+    font-size: 28px;
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    overflow-x: auto; /* Aktifkan scroll horizontal */
+    white-space: nowrap; /* Pastikan tidak turun ke bawah */
+    scrollbar-width: thin; /* Untuk browser yang mendukung */
+    scrollbar-color: #ccc transparent; /* Warna scrollbar */
+}
+.card {
+    max-width: 540px;
+    background: linear-gradient(to right, var(--warna-utama), #c5c5c5);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* padding: 10px; */
+    display: flex;
+    align-items: stretch;
+    margin: 20px 0 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout dua kolom */
+.card-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Gambar */
+.card-img {
+    flex: 0 0 200px;
+    max-width: 200px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bagian teks */
+.card-body {
+    flex: 1;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+}
+.btn-baca{
+    margin-top: 40px;
+    background: var(--button);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--font);
+}
+.btn-baca:hover{
+    background: #8537c5;
+}
+.card-title {
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 50px;
+    color: var(--white);
+    font-family: var(--font);
+}
+
+.card-text {
+    font-weight: bold;
+    margin-top: 28px;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: var(--font);
+}
+
+.small-text {
+    font-family: var(--font);
+    font-weight: lighter;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Styling Card */
+.genre-section{
+    display: flex;
+}
+
+.card-genre {
+    position: relative;
+    width: 250px; /* Sesuaikan dengan kebutuhan */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 40px;
+
+}
+
+/* Styling Gambar */
+.card-img-genre {
+    width: 100%;
+    display: block;
+}
+
+/* Overlay Teks */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #b45efb, #ffffff00); /* Efek transparan */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.overlay1{
+    background: linear-gradient(to top, var(--warna-utama), #ffffff00);
+}
+.overlay2{
+    background: linear-gradient(to top, #5EB4FB, #ffffff00);    
+}
+.overlay3{
+    background: linear-gradient(to top, #5EFBB4, #ffffff00);
+}
+
+/* Styling Teks */
+.card-title-genre {
+    font-family: var(--font);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text-genre {
+    font-family: var(--font);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.subtit{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font);
+    font-weight: lighter;
+    color: var(--warna-utama);
+    margin: 20px 40px 10px 40px;
+}
+
+.subtit a{
+    text-decoration: underline;
+    color: var(--warna-utama);
+    transition: color 0.3s ease;
+}
+
+.subtit a:hover{
+    color: #333;
+}
+
+.popular-section{
+    margin-left: 20px;
+}
+.popular-card{
+    display: flex;
+}
