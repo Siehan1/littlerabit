@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literrabit | Buku</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #FBB45E;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <button id="cancelBtn" class="cancel">✖</button>
+        <button id="prevBtn"><</button>
+        <div class="page">
+            <img id="pageImage" alt="buku">
+        </div>
+        <button id="nextBtn">></button>
+        <button id="finishBtn" class="finish">Selesai</button>
+    </div>
+
+    <script src="./script2.js"></script>
+</body>
+</html>
