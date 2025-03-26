@@ -137,3 +137,79 @@ document.addEventListener("DOMContentLoaded", function () {
 
     books.forEach(addBook);
 });
+
+// baca buku
+// Array gambar yang akan digunakan
+const images = [
+    "./src/baca1.png",
+    "./src/folderbaca/Screenshot 2025-03-14 102227 1.png",
+    "./src/folderbaca/buku3.png",
+    "./src/folderbaca/buku4.png",
+    "./src/folderbaca/buku5.png",
+    "./src/folderbaca/buku6.png",
+    "./src/folderbaca/buku7.png",
+    "./src/folderbaca/buku8.png",
+    "./src/folderbaca/buku9.png",
+    "./src/folderbaca/buku10.png",
+    "./src/folderbaca/buku11.png",
+    "./src/folderbaca/buku12.png",
+    "./src/folderbaca/buku13.png",
+    "./src/folderbaca/buku14.png",
+    "./src/folderbaca/buku15.png",
+    "./src/folderbaca/buku16.png",
+    "./src/folderbaca/buku17.png",
+    "./src/folderbaca/buku18.png",
+    "./src/folderbaca/buku19.png",
+    "./src/folderbaca/buku20.png",
+    "./src/folderbaca/buku21.png",
+    "./src/folderbaca/buku22.png"
+    
+
+];
+
+let currentPage = 0;
+
+const pageImage = document.getElementById("pageImage");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const finishBtn = document.getElementById("finishBtn");
+const cancelBtn = document.getElementById("cancelBtn");
+
+// Tampilkan halaman pertama saat load
+pageImage.src = images[currentPage];
+
+nextBtn.addEventListener("click", () => {
+    if (currentPage < images.length - 1) {
+        currentPage++;
+        pageImage.src = images[currentPage];
+    }
+
+    checkLastPage();
+});
+
+prevBtn.addEventListener("click", () => {
+    if (currentPage > 0) {
+        currentPage--;
+        pageImage.src = images[currentPage];
+    }
+
+    checkLastPage();
+});
+
+function checkLastPage() {
+    if (currentPage === images.length - 1) {
+        finishBtn.style.display = "block"; // Tampilkan tombol selesai
+    } else {
+        finishBtn.style.display = "none"; // Sembunyikan saat belum di halaman terakhir
+    }
+}
+
+// Jika tombol "Selesai" diklik, kembali ke beranda
+finishBtn.addEventListener("click", () => {
+    window.location.href = "index.html"; // Ganti dengan halaman beranda
+});
+
+// Jika tombol "Cancel" ditekan, kembali ke beranda
+cancelBtn.addEventListener("click", () => {
+    window.location.href = "index.html"; // Ganti dengan halaman beranda
+});
