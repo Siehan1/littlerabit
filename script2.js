@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Data buku
     const books = [
         { title: "Ikan Tipis", author: "S. Titik Widia", image: "./src/image16-1.png", lastRead: true },
-        { title: "Cepat Kering, Bunga Kamboja", author: "Leila S. Chudori", image: "./src/image 14.png", lastRead: true },
+        { title: "Cepat Kering, Bunga Kamboja", author: "Leila S. Chudori", image: "./src/image14.png", lastRead: true },
         { title: "Bumi", author: "Tere Liye", image: "./src/image15.png", lastRead: false },
         {title:"Si cemong Coak", author: "Iwok Abqary & Ikku Nala", image:"./src/image5.png", lastRead:false},
         {title:"Si Pejuang Air", author: "Ervina Hasibuan", image:"./src/image15.png", lastRead:false},
-        { title:"Hari Lebaran Yaya", author: "Hasna Taqqiya", image:"./src/image 19.png", lastRead: true},
+        { title:"Hari Lebaran Yaya", author: "Hasna Taqqiya", image:"./src/image19.png", lastRead: true},
         { title: "Jadi Apa ya?", author: "Nabila Adani", image:"./src/image20.png", lastRead:false},
-        { title:"Festival Aku datang", author:"Tantra Rahmadia", image:"./src/image 21.png", lastRead:true},
-        {title:"Membuat Apam", author:"Kiki Putri", image:"./src/image 22.png", lastRead: true}
+        { title:"Festival Aku datang", author:"Tantra Rahmadia", image:"./src/image21.png", lastRead:true},
+        {title:"Membuat Apam", author:"Kiki Putri", image:"./src/image22.png", lastRead: true}
     ];
 
     function truncateText(text, maxLength) {
