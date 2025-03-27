@@ -20,8 +20,8 @@
 
         <div class="navbar-container">
             <div class="items-nav">
-                <a href="#">Beranda</a>
-                <a href="#">Daftar Buku</a>
+                <a href="./beranda.html">Beranda</a>
+                <a href="./daftar_buku.html">Daftar Buku</a>
                 <a href="#">Dashboard</a>
             </div>
             <div class="container-2">
@@ -70,12 +70,12 @@
                 
                 <div class="card-body">
                     <h6 class="card-title">Sedang Trend</h6>
-                    <h4 class="card-text">Festival, Aku Datang!</h4>
-                    <p class="small-text">Tantra Rahmadania</p>
-                    <button class="btn-baca">Baca</button>
+                    <h4 class="card-text">Tidak bisa tidak</h4>
+                    <p class="small-text">Valentina Kris</p>
+                    <button class="btn-baca" id="baca1">Baca</button>
                 </div>
                 <div class="card-img">
-                    <img src="./src/image21.png" alt="Gambar">
+                    <img src="./src/image23.png" alt="Gambar">
                 </div>
             </div>
         </div>
@@ -297,6 +297,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById("baca1").addEventListener("click",function(){
+            window.location.href = "baca_buku.html"
+        })
+    </script>
     <!-- <script src="script2.js"></script> -->
 </body>
 </html>

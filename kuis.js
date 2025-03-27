@@ -177,6 +177,18 @@ document.addEventListener('DOMContentLoaded', function() {
         scoreContainer.style.display = 'block';
         scoreElement.textContent = score;
         progressBar.style.width = '100%';
+    
+        // Tentukan teks tombol berdasarkan hasil kuis
+        if (score === questions.length) {
+            restartButton.textContent = "Lanjutkan";
+            restartButton.onclick = () => window.location.href = "baca_buku.html"; // Ganti dengan halaman selanjutnya
+        } else if (lives === 0) {
+            restartButton.textContent = "Coba Lagi";
+            restartButton.onclick = restartQuiz; // Restart quiz jika gagal
+        } else {
+            restartButton.textContent = "Ulangi";
+            restartButton.onclick = restartQuiz; // Bisa mengulang quiz jika ingin
+        }
     }
 
     // Restart quiz

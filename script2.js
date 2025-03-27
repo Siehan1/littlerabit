@@ -206,10 +206,10 @@ function checkLastPage() {
 
 // Jika tombol "Selesai" diklik, kembali ke beranda
 finishBtn.addEventListener("click", () => {
-    window.location.href = "index.html"; // Ganti dengan halaman beranda
+    window.location.href = "quiz.html"; // Ganti dengan halaman beranda
 });
 
 // Jika tombol "Cancel" ditekan, kembali ke beranda
 cancelBtn.addEventListener("click", () => {
-    window.location.href = "index.html"; // Ganti dengan halaman beranda
+    window.location.href = "baca_buku.html"; // Ganti dengan halaman beranda
 });

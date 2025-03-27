@@ -34,8 +34,14 @@
 
         <div class="content-kuis">
             <p>Masuk dan tunjukkan kalau kamu bisa jadi juara di kuis Literabit!</p>
-            <button class="quis-btn">Siap Bermain</button>
+            <button class="quis-btn" id="quisBtnsiap">Siap Bermain</button>
         </div>
     </div>
+
+    <script>
+        document.getElementById("quisBtnsiap").addEventListener("click",function(){
+            window.location.href = "quiz-2.html"
+        })
+    </script>
 </body>
 </html>
