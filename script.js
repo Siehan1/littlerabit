@@ -42,51 +42,79 @@ document.addEventListener("DOMContentLoaded", function () {
     let passwordInput = document.getElementById("password");
     let konfirmInput = document.getElementById("konfirm");
 
+    let alertBox = document.getElementById("custom-alert");
+    let alertMessage = document.getElementById("alert-message");
+    let alertOk = document.getElementById("alert-ok");
+
+    function showAlert(message, redirect = null) {
+        alertMessage.textContent = message;
+        alertBox.classList.add("show");
+
+        alertOk.onclick = function () {
+            alertBox.classList.remove("show");
+            if (redirect) {
+                window.location.href = redirect;
+            }
+        };
+    }
+
     if (registerBtn) {
         registerBtn.addEventListener("click", function (event) {
-            event.preventDefault(); // Mencegah reload halaman
+            event.preventDefault();
 
             let email = emailInput.value.trim();
             let username = usernameInput.value.trim();
             let password = passwordInput.value;
             let konfirm = konfirmInput.value;
 
-            // Validasi input tidak boleh kosong
             if (!email || !username || !password || !konfirm) {
-                alert("Semua kolom harus diisi!");
+                showAlert("Semua kolom harus diisi!");
                 return;
             }
 
-            // Validasi password harus sama dengan konfirmasi password
             if (password !== konfirm) {
-                alert("Konfirmasi password tidak cocok!");
+                showAlert("Konfirmasi password tidak cocok!");
                 return;
             }
 
-            // Cek apakah email sudah terdaftar
             let users = JSON.parse(localStorage.getItem("users")) || [];
             let existingUser = users.find(user => user.email === email);
             if (existingUser) {
-                alert("Email sudah terdaftar! Silakan gunakan email lain.");
+                showAlert("Email sudah terdaftar! Silakan gunakan email lain.");
                 return;
             }
 
-            // Simpan user baru ke localStorage
             let newUser = { email, username, password };
             users.push(newUser);
             localStorage.setItem("users", JSON.stringify(users));
 
-            alert("Pendaftaran berhasil! Silakan login.");
-            window.location.href = "login.html"; // Redirect ke halaman login
+            showAlert("Pendaftaran berhasil! Silakan login.", "login.html");
         });
     }
 });
+
 
 // login
 document.addEventListener("DOMContentLoaded", function () {
     let loginBtn = document.getElementById("loginBtn");
     let emailInput = document.querySelector(".email");
     let passwordInput = document.getElementById("password");
+
+    let alertBox = document.getElementById("custom-alert");
+    let alertMessage = document.getElementById("alert-message");
+    let alertOk = document.getElementById("alert-ok");
+
+    function showAlert(message, redirect = null) {
+        alertMessage.textContent = message;
+        alertBox.classList.add("show");
+
+        alertOk.onclick = function () {
+            alertBox.classList.remove("show");
+            if (redirect) {
+                window.location.href = redirect;
+            }
+        };
+    }
 
     if (loginBtn) {
         loginBtn.addEventListener("click", function (event) {
@@ -96,15 +124,14 @@ document.addEventListener("DOMContentLoaded", function () {
             let password = passwordInput.value;
 
             let users = JSON.parse(localStorage.getItem("users")) || [];
-
             let validUser = users.find(user => user.email === email && user.password === password);
 
             if (validUser) {
-                alert("Login berhasil!");
-                window.location.href = "beranda.html"; // Redirect ke halaman utama
+                showAlert("Login berhasil!", "beranda.html"); // Redirect ke halaman utama setelah klik OK
             } else {
-                alert("Email atau password salah!");
+                showAlert("Email atau password salah!");
             }
         });
     }
 });
+
