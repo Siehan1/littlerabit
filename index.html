@@ -28,14 +28,24 @@
                 <h1>Membaca menjadi Seru, Gratis, dan menyenangkan!</h1>
                 <div class="btn-landing">
                     <div class="btn-mulai">
-                        <button>MULAI</button>
+                        <button id="mulai">MULAI</button>
                     </div>
                     <div class="btn-regist">
-                        <a href="login.html"><button>AKU SUDAH PUNYA AKUN</button></a>
+                        <button id="regist">AKU SUDAH PUNYA AKUN</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("mulai").addEventListener("click",function(){
+            window.location.href = "login.html";
+        });
+        document.getElementById("regist").addEventListener("click",function(){
+            window.location.href = "register.html";
+        });
+
+    </script>
 </body>
 </html>
