@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Buku - Literabit</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="quiz-buku">
-      <section class="overlap-group-wrapper">
-        <div class="overlap-group">
-          <div class="overlap">
-            <div class="content">
-              <img class="tak" src="./src/quiz1.svg" alt="Decorative illustration" />
-              <p class="masuk-dan-tunjukkan">Masuk dan tunjukkan kalau kamu bisa jadi juara di kuis Literabit!</p>
-            </div>
-            <div class="cta-container">
-              <button class="cta-button">
-                <span class="cta-text">Siap Bermain</span>
-              </button>
-            </div>
-          </div>
-          <h1 class="mari-bermain-bersama">Mari Bermain<br />Bersama &gt;&lt;</h1>
-          <img class="group" src="./src/x.svg" alt="Decorative group icon" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Littlerabbit | Kuis</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #FBB45E;
+    }
+    </style>
+</head>
+<body>
+    <div class="container-kuis">
+        <div class="bermain-bersama-kuis">
+            <h2>Mari Bermain Bersama</h2>
         </div>
-      </section>
-    </main>
-  </body>
+
+        <div class="kelinci">
+            <img src="./src/kelinci.svg" alt="">
+        </div>
+
+        <div class="content-kuis">
+            <p>Masuk dan tunjukkan kalau kamu bisa jadi juara di kuis Literabit!</p>
+            <button class="quis-btn">Siap Bermain</button>
+        </div>
+    </div>
+</body>
 </html>
